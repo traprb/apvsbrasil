@@ -3,360 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APVS Brasil | Consultor Paulo - Proteção Veicular</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>APVS BRASIL | Consultor Paulo - Liderança em Proteção</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --azul-apvs: #002855;
-            --azul-claro: #003d82;
-            --amarelo-apvs: #ffcc00;
-            --branco: #ffffff;
-            --cinza-claro: #f4f4f4;
-            --texto-escuro: #333333;
-            --gold-gradient: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --primary-blue: #002855;
+            --accent-gold: #FFD700;
+            --dark-blue: #001a38;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+            --success: #28a745;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--white); color: #333; overflow-x: hidden; }
+
+        /* Header Estilizado */
+        header {
+            background: var(--primary-blue);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            border-bottom: 3px solid var(--accent-gold);
         }
 
-        body {
-            background-color: var(--branco);
-            color: var(--texto-escuro);
-            line-height: 1.6;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Header & Hero */
+        .logo-text { color: var(--white); font-weight: 900; font-size: 1.8rem; letter-spacing: -1px; }
+        .logo-text span { color: var(--accent-gold); }
+
+        /* Hero Section - Impacto Total */
         .hero {
-            background: linear-gradient(rgba(0, 40, 85, 0.9), rgba(0, 40, 85, 0.9)), 
-                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Imagem de fundo: Caminhão/Estrada */
+            background: linear-gradient(135deg, rgba(0, 40, 85, 0.95) 0%, rgba(0, 26, 56, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
-            color: var(--branco);
-            padding: 100px 20px;
+            color: var(--white);
+            padding: 120px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--amarelo-apvs);
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .logo-area h1 {
-            font-size: 3.5rem;
+        .hero-badge {
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 8px 20px;
+            border-radius: 50px;
             font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 10px;
-        }
-
-        .logo-area h1 span {
-            color: var(--amarelo-apvs);
-        }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 30px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
-        }
+        .hero h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 900; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 40px; opacity: 0.9; font-weight: 300; }
 
-        /* Stats Grid */
-        .stats {
+        /* Stats Bar */
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-top: 50px;
+            max-width: 1200px;
+            margin: -60px auto 0;
+            padding: 0 20px;
         }
 
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
+        .stat-item {
+            background: var(--white);
             padding: 30px;
             border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-bottom: 5px solid var(--accent-gold);
         }
 
-        .stat-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
+        .stat-item h3 { font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 5px; }
+        .stat-item p { font-size: 0.9rem; font-weight: 700; color: #666; text-transform: uppercase; }
+
+        /* Seção Frotas e Caminhões */
+        .section-padding { padding: 100px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+
+        .content h2 { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px; font-weight: 800; }
+        .content p { font-size: 1.1rem; margin-bottom: 20px; color: #555; }
+
+        .feature-list { list-style: none; }
+        .feature-list li { margin-bottom: 15px; display: flex; align-items: center; font-weight: 600; }
+        .feature-list li i { color: var(--success); margin-right: 15px; font-size: 1.2rem; }
+
+        /* Cards de Soluções */
+        .solutions { background: var(--light-gray); }
+        .cards-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            transition: 0.4s;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-card h3 {
-            font-size: 2.5rem;
-            color: var(--amarelo-apvs);
-            margin-bottom: 5px;
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .card h3 { margin-bottom: 15px; font-size: 1.5rem; color: var(--primary-blue); }
+
+        /* Selo de Confiança */
+        .trust-banner {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        /* Seções Gerais */
-        section {
+        .iso-badge {
+            border: 2px solid var(--accent-gold);
+            padding: 10px 30px;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Final */
+        .cta-final {
+            background: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
             padding: 80px 20px;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--azul-apvs);
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: var(--amarelo-apvs);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Cards de Serviços */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--branco);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--azul-apvs);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            border-top-color: var(--amarelo-apvs);
-            transform: translateY(-5px);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--azul-apvs);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--azul-apvs);
-        }
-
-        /* Pilares de Fechamento (Gatilhos Mentais) */
-        .pillars {
-            background-color: var(--azul-apvs);
-            color: var(--branco);
-        }
-
-        .pillar-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .pillar-item i {
-            font-size: 1.5rem;
-            color: var(--amarelo-apvs);
-            margin-right: 20px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--cinza-claro);
-            text-align: center;
-        }
-
         .btn-whatsapp {
-            background-color: #25d366;
+            background: var(--success);
             color: white;
-            padding: 20px 40px;
+            padding: 22px 50px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 800;
             display: inline-block;
             transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
-            background-color: #128c7e;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--azul-apvs);
-            color: var(--branco);
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .consultor-info {
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.4);
             margin-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
         }
 
-        .badge-premium {
-            background: var(--gold-gradient);
-            color: #000;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 10px;
+        .btn-whatsapp:hover { transform: scale(1.05); background: #218838; }
+
+        .consultor-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 40px auto 0;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         @media (max-width: 768px) {
-            .logo-area h1 { font-size: 2.5rem; }
-            .hero h2 { font-size: 1.2rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="container">
-            <div class="logo-area">
-                <h1>APVS <span>BRASIL</span></h1>
-            </div>
-            <h2>Proteção de Elite para quem não pode parar.</h2>
-            <p>
-                Somos a maior associação de proteção veicular da América Latina. 
-                Há mais de 14 anos, garantimos que seu patrimônio esteja seguro com estrutura de ponta e atendimento nacional.
-            </p>
-
-            <div class="stats">
-                <div class="stat-card">
-                    <h3>+250k</h3>
-                    <p>Associados Ativos</p>
-                </div>
-                <div class="stat-card">
-                    <h3>23</h3>
-                    <p>Estados Atendidos</p>
-                </div>
-                <div class="stat-card">
-                    <h3>+280</h3>
-                    <p>Unidades Físicas</p>
-                </div>
-                <div class="stat-card">
-                    <h3>14</h3>
-                    <p>Anos de Liderança</p>
-                </div>
+    <header>
+        <div class="nav-container">
+            <div class="logo-text">APVS <span>BRASIL</span></div>
+            <div style="color: white; font-size: 0.8rem; text-align: right;">
+                <i class="fas fa-shield-alt" style="color: var(--accent-gold);"></i> LÍDER AMÉRICA LATINA
             </div>
         </div>
     </header>
 
-    <!-- QUEM SOMOS / DIFERENCIAL -->
-    <section class="container">
-        <h2 class="section-title">Soluções Sob Medida</h2>
-        <div class="services-grid">
-            <!-- Caminhões -->
-            <div class="service-card">
-                <i class="fas fa-truck-moving"></i>
-                <h3>Frotas & Caminhões</h3>
-                <p>Proteção completa para pesados com cobertura nacional. Roubo, furto, colisão e assistência 24h especializada em carga pesada.</p>
-            </div>
-            <!-- Uber / App -->
-            <div class="service-card">
-                <i class="fas fa-car-side"></i>
-                <h3>Motoristas de App</h3>
-                <p>Planos exclusivos para Uber e 99. Não fique parado! Agilidade no reparo e proteção contra terceiros inclusa.</p>
-            </div>
-            <!-- Individual -->
-            <div class="service-card">
-                <i class="fas fa-motorcycle"></i>
-                <h3>Carros e Motos</h3>
-                <p>Segurança para o seu veículo de passeio com o melhor custo-benefício do mercado e sem análise de perfil (SPC/Serasa).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PILARES DE FECHAMENTO -->
-    <section class="pillars">
+    <section class="hero">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Por que fechar agora?</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <div class="pillar-item">
-                    <i class="fas fa-check-circle"></i>
-                    <div>
-                        <strong>Sem Consulta ao SPC/Serasa:</strong> Aprovação imediata para você começar a rodar protegido hoje mesmo.
-                    </div>
-                </div>
-                <div class="pillar-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <strong>Assistência 24 Horas:</strong> Reboque, chaveiro, troca de pneus e auxílio pane em todo o Brasil.
-                    </div>
-                </div>
-                <div class="pillar-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <div>
-                        <strong>Fundo de Reserva Sólido:</strong> Garantia de pagamento integral em casos de perda total, roubo ou furto.
-                    </div>
-                </div>
-                <div class="pillar-item">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <div>
-                        <strong>Preço Justo:</strong> Até 40% mais barato que seguros tradicionais, com a mesma (ou superior) eficiência.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHAMADA PARA AÇÃO -->
-    <section class="cta-section">
-        <div class="container">
-            <span class="badge-premium">OFERTA EXCLUSIVA</span>
-            <h2 style="font-size: 2.2rem; color: var(--azul-apvs); margin-bottom: 20px;">Pronto para proteger seu patrimônio?</h2>
-            <p style="margin-bottom: 40px; font-size: 1.2rem;">Não deixe para amanhã o que pode ser protegido hoje. Peça sua cotação em 2 minutos.</p>
-            
-            <!-- LINK DO WHATSAPP DO PAULO -->
-            <a href="https://wa.me/11978311920?text=Olá%20Paulo,%20vi%20seu%20portfólio%20e%20gostaria%20de%20uma%20cotação%20agora!" class="btn-whatsapp">
+            <span class="hero-badge">17 Anos de Excelência</span>
+            <h1>Proteção Veicular de Classe Mundial</h1>
+            <p>Segurança para quem movimenta o Brasil. A maior estrutura da América Latina agora ao seu alcance com o Consultor Paulo.</p>
+            <a href="https://wa.me/5511978311920?text=Olá%20Paulo,%20quero%20fechar%20minha%20cotação%20com%20a%20Top%201%20do%20Brasil!" class="btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> SOLICITAR COTAÇÃO AGORA
             </a>
         </div>
     </section>
 
-    <!-- FOOTER / CONSULTOR -->
-    <footer>
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>17 Anos</h3>
+            <p>História e Solidez</p>
+        </div>
+        <div class="stat-item">
+            <h3>+300 Mil</h3>
+            <p>Associados Ativos</p>
+        </div>
+        <div class="stat-item">
+            <h3>TOP 1</h3>
+            <p>América Latina</p>
+        </div>
+        <div class="stat-item">
+            <h3>ISO 9001</h3>
+            <p>Qualidade Total</p>
+        </div>
+    </div>
+
+    <section class="section-padding">
         <div class="container">
-            <div class="consultor-info">
-                <p>Atendimento Personalizado:</p>
-                <h2 style="color: var(--amarelo-apvs); margin: 10px 0;">PAULO</h2>
-                <p>Consultor Especialista APVS Brasil</p>
-                <p style="font-size: 0.9rem; margin-top: 20px; opacity: 0.7;">
-                    APVS BRASIL - Proteção Veicular<br>
-                    CNPJ: 10.395.397/0001-13<br>
-                    "Grandes patrimônios exigem grandes parceiros."
-                </p>
+            <div class="grid-2">
+                <div class="content">
+                    <h2>Soluções para Frotas e Pesados</h2>
+                    <p>Empresário, sua frota não pode parar. A APVS Brasil oferece a estrutura mais robusta para caminhões e frotas comerciais do país.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-double"></i> Cobertura 100% FIPE em todo território nacional.</li>
+                        <li><i class="fas fa-check-double"></i> Assistência 24h especializada em veículos pesados.</li>
+                        <li><i class="fas fa-check-double"></i> Sem análise de perfil ou consulta SPC/Serasa.</li>
+                        <li><i class="fas fa-check-double"></i> Indenização rápida e sem burocracia excessiva.</li>
+                    </ul>
+                </div>
+                <div class="image-area">
+                    <img src="https://images.unsplash.com/photo-1586191582151-f73872dfd183?auto=format&fit=crop&w=800&q=80" alt="Caminhão APVS" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="section-padding solutions">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 50px;">Proteção para Todos os Segmentos</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fas fa-car"></i>
+                    <h3>Veículos Leves</h3>
+                    <p>Proteção completa contra roubo, furto, colisão e fenômenos da natureza para seu carro de passeio.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-taxi"></i>
+                    <h3>Uber e Apps</h3>
+                    <p>Planos específicos para quem trabalha no volante. Agilidade máxima para você não perder dias de trabalho.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Motocicletas</h3>
+                    <p>Segurança real para sua moto com assistência 24h e reboque em qualquer lugar do Brasil.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-building"></i>
+                    <h3>Locadoras</h3>
+                    <p>Gestão de risco inteligente para frotas de locação com o melhor custo-benefício do mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-banner">
+        <div class="container">
+            <div class="iso-badge">CERTIFICAÇÃO ISO 9001</div>
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px;">A Única com Estrutura Própria de Atendimento</h2>
+            <p style="max-width: 900px; margin: 0 auto; font-size: 1.2rem; opacity: 0.8;">
+                Diferente de seguros comuns, a APVS é uma associação mútua focada no associado. 
+                São mais de 280 regionais físicas para te atender olho no olho.
+            </p>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Fale com quem entende de Proteção Patrimonial</h2>
+            <p>Não coloque seu patrimônio em mãos inexperientes. Feche com a líder.</p>
+            
+            <div class="consultor-card">
+                <h3 style="color: var(--accent-gold); font-size: 1.8rem;">PAULO</h3>
+                <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 15px;">Consultor Comercial Especialista</p>
+                <p><i class="fas fa-phone"></i> (11) 97831-1920</p>
+                <p><i class="fas fa-map-marker-alt"></i> Atendimento Nacional - APVS Brasil</p>
+            </div>
+
+            <a href="https://wa.me/5511978311920?text=Olá%20Paulo,%20estou%20com%20meu%20veículo%20desprotegido%20e%20quero%20a%20melhor%20proteção%20da%20América%20Latina!" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> RECEBER MINHA COTAÇÃO AGORA
+            </a>
+            
+            <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.6;">
+                APVS BRASIL - CNPJ: 10.395.397/0001-13<br>
+                © 2024 Todos os direitos reservados.
+            </p>
+        </div>
+    </section>
 
 </body>
 </html>
