@@ -3,174 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO - PALAVRAS CHAVE PARA O GOOGLE -->
-    <title>APVS BRASIL | Proteção Veicular Top 1 América Latina - Consultor Paulo</title>
-    <meta name="description" content="Proteção veicular para caminhões, frotas, Uber e carros de passeio. A APVS Brasil é a maior da América Latina com 17 anos de mercado. Faça sua cotação com Paulo.">
-    <meta name="keywords" content="APVS Brasil, Proteção Veicular, Seguro Caminhão, Proteção de Frotas, Seguro Uber, Melhor Proteção Veicular, Consultor Paulo APVS">
     
-    <!-- Fontes e Ícones -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- SEO - INDEXAÇÃO NO TOPO DO GOOGLE -->
+    <title>APVS BRASIL | Proteção Veicular Top 1 América Latina - Consultor Paulo</title>
+    <meta name="description" content="A melhor proteção veicular para caminhões, frotas, carros e motos. APVS Brasil: 17 anos de liderança, sem consulta SPC/Serasa e indenização 100% FIPE.">
+    <meta name="keywords" content="Proteção Veicular, Seguro de Caminhão, Seguro para Frotas, APVS Brasil, Seguro Uber, Proteção para Moto, Melhor que Seguro, Cotação APVS Paulo">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
             --apvs-blue: #002855;
             --apvs-gold: #FFCC00;
-            --apvs-dark: #00152e;
+            --apvs-dark: #001226;
             --white: #ffffff;
-            --gray: #f4f7f9;
-            --text: #333;
+            --text: #2d3436;
             --success: #25d366;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--white); color: var(--text); line-height: 1.6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #fff; color: var(--text); overflow-x: hidden; }
 
-        /* Header */
+        /* Header Dinâmico */
         header {
             background: var(--apvs-blue);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 4px solid var(--apvs-gold);
+            border-bottom: 3px solid var(--apvs-gold);
         }
-        .logo { color: var(--white); font-weight: 800; font-size: 1.5rem; text-decoration: none; }
+        .logo { color: var(--white); font-weight: 900; font-size: 1.6rem; text-decoration: none; }
         .logo span { color: var(--apvs-gold); }
-        .header-contact { color: var(--white); font-weight: 600; font-size: 0.9rem; }
 
-        /* Hero Section */
+        /* Hero - Impacto Visual */
         .hero {
-            padding: 160px 5% 100px;
-            background: linear-gradient(rgba(0, 40, 85, 0.85), rgba(0, 21, 46, 0.9)), 
-                        url('https://images.unsplash.com/photo-1501700489910-fb3a7eaa0d71?q=80&w=2000&auto=format&fit=crop');
+            height: 90vh;
+            background: linear-gradient(rgba(0, 40, 85, 0.8), rgba(0, 18, 38, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-        }
-        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
-        .badge-top { background: var(--apvs-gold); color: var(--apvs-blue); padding: 5px 20px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 15px; }
-
-        /* Stats */
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: -50px auto 50px;
+            color: var(--white);
             padding: 0 5%;
         }
-        .stat-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--apvs-gold);
-        }
-        .stat-card h3 { font-size: 2rem; color: var(--apvs-blue); margin-bottom: 5px; }
-        .stat-card p { font-size: 0.85rem; font-weight: 600; color: #777; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; max-width: 900px; margin-bottom: 35px; font-weight: 300; }
+        .btn-main { background: var(--apvs-gold); color: var(--apvs-blue); padding: 20px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        /* POR QUE FECHAR CONOSCO? - A RESPOSTA DEFINITIVA */
-        .why-us { padding: 80px 5%; background: var(--gray); }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--apvs-blue); font-weight: 800; }
-        .section-title div { width: 80px; height: 5px; background: var(--apvs-gold); margin: 15px auto; }
+        /* Seção de Autoridade - "Quem somos" */
+        .authority { padding: 80px 5%; text-align: center; background: var(--white); }
+        .authority h2 { font-size: 2.5rem; color: var(--apvs-blue); margin-bottom: 20px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 40px; }
+        .stat-box { padding: 30px; border-radius: 15px; background: var(--apvs-blue); color: var(--white); border-bottom: 5px solid var(--apvs-gold); }
+        .stat-box h3 { font-size: 2.5rem; color: var(--apvs-gold); }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .benefit-item {
+        /* CARDS PROFISSIONAIS - CAMINHÃO, CARRO, MOTO */
+        .products { padding: 80px 5%; background: #f9f9f9; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .product-card {
             background: var(--white);
-            padding: 35px;
-            border-radius: 15px;
-            transition: 0.3s;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: 0.4s;
             border: 1px solid #eee;
         }
-        .benefit-item:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
-        .benefit-item i { font-size: 2.5rem; color: var(--apvs-blue); margin-bottom: 20px; }
-        .benefit-item h4 { font-size: 1.3rem; margin-bottom: 15px; color: var(--apvs-blue); }
-        .benefit-item p { font-size: 0.95rem; color: #555; }
+        .product-card:hover { transform: translateY(-15px); border-color: var(--apvs-gold); }
+        .product-img { height: 220px; background-size: cover; background-position: center; }
+        .product-info { padding: 30px; }
+        .product-info h3 { color: var(--apvs-blue); font-size: 1.6rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .product-info ul { list-style: none; }
+        .product-info li { margin-bottom: 10px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
+        .product-info li i { color: var(--success); }
 
-        /* Imagem de Proteção Veicular (Meio) */
-        .mid-banner {
-            height: 450px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-align: center;
-            padding: 0 5%;
-        }
-        .mid-banner h2 { font-size: 2.5rem; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        /* TABELA COMPARATIVA - POR QUE FECHAR CONOSCO? */
+        .comparison { padding: 80px 5%; background: var(--apvs-dark); color: var(--white); }
+        .comp-table { width: 100%; max-width: 900px; margin: 40px auto; border-collapse: collapse; background: rgba(255,255,255,0.05); border-radius: 15px; overflow: hidden; }
+        .comp-table th, .comp-table td { padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .comp-table th { background: var(--apvs-blue); color: var(--apvs-gold); font-size: 1.2rem; }
+        .check-yes { color: var(--success); font-weight: bold; }
+        .check-no { color: #ff4757; font-weight: bold; }
 
-        /* Frotas e Caminhões */
-        .frotas { padding: 80px 5%; }
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* CTA & CONSULTOR */
+        .cta-section { padding: 100px 5%; text-align: center; background: linear-gradient(45deg, var(--apvs-blue), var(--apvs-dark)); color: var(--white); }
+        .consultant-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 2px solid var(--apvs-gold);
         }
-        .flex-text { flex: 1; min-width: 300px; }
-        .flex-img { flex: 1; min-width: 300px; }
-        .flex-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .btn-whatsapp { background: var(--success); color: white; padding: 25px 50px; border-radius: 60px; text-decoration: none; font-size: 1.5rem; font-weight: 900; display: inline-block; transition: 0.3s; box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3); }
+        .btn-whatsapp:hover { transform: scale(1.05); }
 
-        /* CTA Section */
-        .cta-box {
-            background: var(--apvs-blue);
-            color: var(--white);
-            padding: 80px 5%;
-            text-align: center;
-        }
-        .btn-whatsapp {
-            background: var(--success);
-            color: white;
-            padding: 20px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-top: 30px;
-            transition: 0.3s;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-        }
-        .btn-whatsapp:hover { transform: scale(1.05); background: #1eb954; }
-
-        /* Footer */
-        footer {
-            background: var(--apvs-dark);
-            color: var(--white);
-            padding: 60px 5% 20px;
-            text-align: center;
-        }
-        .footer-info { margin-bottom: 40px; opacity: 0.8; font-size: 0.9rem; }
-        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.6; }
+        footer { background: #000; color: #777; padding: 40px 5%; text-align: center; font-size: 0.8rem; }
 
         /* Responsividade */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .mid-banner h2 { font-size: 1.8rem; }
-            .stats-container { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .comp-table { font-size: 0.8rem; }
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -178,133 +122,138 @@
 
     <header>
         <a href="#" class="logo">APVS <span>BRASIL</span></a>
-        <div class="header-contact">
-            <i class="fab fa-whatsapp" style="color: var(--success);"></i> (11) 97831-1920
-        </div>
+        <div style="color: white; font-weight: bold;"><i class="fas fa-user-tie" style="color: var(--apvs-gold);"></i> Consultor Paulo</div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="badge-top">TOP 1 AMÉRICA LATINA</div>
-        <h1>Proteção de Elite para seu Patrimônio</h1>
-        <p>Seja para o seu caminhão, sua frota ou seu carro de aplicativo, a APVS Brasil oferece a segurança que as seguradoras tradicionais não conseguem cobrir.</p>
-        <a href="https://wa.me/5511978311920?text=Olá%20Paulo,%20quero%20uma%20cotação%20com%20a%20líder%20do%20mercado!" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> QUERO MINHA COTAÇÃO AGORA
-        </a>
+        <div style="background: var(--apvs-gold); color: #000; padding: 5px 20px; border-radius: 50px; font-weight: 900; margin-bottom: 20px;">TOP 1 DA AMÉRICA LATINA</div>
+        <h1>Proteção Veicular Sem Burocracia</h1>
+        <p>Você sabia que 70% dos brasileiros não têm seguro por causa do preço e da burocracia? A APVS Brasil chegou para mudar isso. Proteção de verdade para quem não pode perder tempo.</p>
+        <a href="https://wa.me/5511978311920" class="btn-main">SOLICITAR COTAÇÃO AGORA</a>
     </section>
 
-    <!-- STATS -->
-    <div class="stats-container">
-        <div class="stat-card">
-            <h3>17 Anos</h3>
-            <p>De Liderança Absoluta</p>
+    <!-- AUTORIDADE -->
+    <section class="authority">
+        <h2>Por que somos os Melhores?</h2>
+        <p>Não somos apenas uma associação, somos a maior estrutura de amparo patrimonial do continente.</p>
+        <div class="stats-grid">
+            <div class="stat-box"><h3>17 Anos</h3><p>Mercado Consolidado</p></div>
+            <div class="stat-box"><h3>+300k</h3><p>Associados Ativos</p></div>
+            <div class="stat-box"><h3>ISO 9001</h3><p>Qualidade Certificada</p></div>
+            <div class="stat-box"><h3>24h</h3><p>Assistência Total</p></div>
         </div>
-        <div class="stat-card">
-            <h3>+300 Mil</h3>
-            <p>Associados Ativos</p>
-        </div>
-        <div class="stat-card">
-            <h3>280+</h3>
-            <p>Regionais no Brasil</p>
-        </div>
-        <div class="stat-card">
-            <h3>ISO 9001</h3>
-            <p>Padrão Internacional</p>
-        </div>
-    </div>
+    </section>
 
-    <!-- POR QUE FECHAR CONOSCO? -->
-    <section class="why-us">
-        <div class="section-title">
-            <h2>Por que fechar com a APVS?</h2>
-            <div></div>
-            <p>A pergunta que todo cliente faz, respondida com fatos inquestionáveis.</p>
-        </div>
-
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <i class="fas fa-shield-check"></i>
-                <h4>Solidez Financeira</h4>
-                <p>Diferente de pequenas associações, a APVS possui o maior fundo de reserva da América Latina. Garantia total de pagamento em caso de perda total, roubo ou furto.</p>
+    <!-- PRODUTOS -->
+    <section class="products">
+        <div class="product-grid">
+            <!-- CAMINHÕES -->
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1586191582151-f73872dfd183?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="product-info">
+                    <h3><i class="fas fa-truck"></i> Pesados & Frotas</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Roubo, Furto e Colisão</li>
+                        <li><i class="fas fa-check-circle"></i> Incêndio e Fenômenos Naturais</li>
+                        <li><i class="fas fa-check-circle"></i> Terceiros até R$ 1 Milhão</li>
+                        <li><i class="fas fa-check-circle"></i> Reboque Especializado</li>
+                    </ul>
+                </div>
             </div>
-            <div class="benefit-item">
-                <i class="fas fa-user-slash"></i>
-                <h4>Sem Análise de Perfil</h4>
-                <p>Não consultamos SPC ou Serasa. Não importa quem dirige ou onde você mora. O foco é a proteção do seu bem, sem burocracia.</p>
+            <!-- CARROS -->
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="product-info">
+                    <h3><i class="fas fa-car"></i> Carros & Uber</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 100% da Tabela FIPE</li>
+                        <li><i class="fas fa-check-circle"></i> Sem Perfil de Condutor</li>
+                        <li><i class="fas fa-check-circle"></i> Carro Reserva (Opcional)</li>
+                        <li><i class="fas fa-check-circle"></i> Proteção de Vidros</li>
+                    </ul>
+                </div>
             </div>
-            <div class="benefit-item">
-                <i class="fas fa-truck-fast"></i>
-                <h4>Foco em quem Trabalha</h4>
-                <p>Caminhoneiros e motoristas de App não podem ficar parados. Nossa assistência 24h é a mais rápida do país, com reboque sem limite de quilometragem (conforme plano).</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-hand-holding-dollar"></i>
-                <h4>Custo-Benefício Imbatível</h4>
-                <p>Economia de até 40% em relação aos seguros convencionais, entregando uma cobertura muito mais ampla e humana.</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-network-wired"></i>
-                <h4>Rede Credenciada Própria</h4>
-                <p>Oficinas de alto nível e peças originais. Seu veículo volta para a estrada com a segurança de quem entende de mecânica pesada e leve.</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-globe-americas"></i>
-                <h4>Presença Nacional</h4>
-                <p>Você nunca está sozinho. Em qualquer lugar do Brasil, existe uma unidade APVS pronta para te dar suporte físico e jurídico.</p>
+            <!-- MOTOS -->
+            <div class="product-card">
+                <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="product-info">
+                    <h3><i class="fas fa-motorcycle"></i> Motocicletas</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Proteção contra Roubo/Furto</li>
+                        <li><i class="fas fa-check-circle"></i> Assistência 24h Nacional</li>
+                        <li><i class="fas fa-check-circle"></i> Reboque em caso de pane</li>
+                        <li><i class="fas fa-check-circle"></i> Melhor custo-benefício</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- BANNER DE PROTEÇÃO -->
-    <section class="mid-banner">
-        <h2>Sua tranquilidade é o nosso maior compromisso.</h2>
-    </section>
-
-    <!-- FROTAS E CAMINHÕES -->
-    <section class="frotas">
-        <div class="flex-container">
-            <div class="flex-img">
-                <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=1000&auto=format&fit=crop" alt="Frota de Caminhões">
-            </div>
-            <div class="flex-text">
-                <h2 style="font-size: 2.2rem; color: var(--apvs-blue); margin-bottom: 20px;">Especialista em Frotas e Pesados</h2>
-                <p>Empresário, sabemos que cada minuto do seu caminhão parado é prejuízo. A APVS Brasil desenvolveu um sistema de gestão de danos que prioriza a agilidade na reparação de veículos pesados.</p>
-                <ul style="list-style: none; margin-top: 20px;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--apvs-gold);"></i> Proteção contra Terceiros de até R$ 1 Milhão.</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--apvs-gold);"></i> Cobertura total para cavalos e carretas.</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--apvs-gold);"></i> Assistência 24h em todo o território nacional.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class="cta-box">
-        <h2>Não arrisque seu patrimônio com amadores.</h2>
-        <p>Fale agora com o Consultor Paulo e garanta a proteção da Top 1 da América Latina.</p>
+    <!-- COMPARATIVO PARA APRESENTAÇÃO PRESENCIAL -->
+    <section class="comparison">
+        <h2 style="text-align: center; font-size: 2.2rem;">APVS Brasil vs. Seguros Comuns</h2>
+        <p style="text-align: center; opacity: 0.7; margin-top: 10px;">Mostre isso ao seu cliente e feche a venda na hora.</p>
         
-        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; display: inline-block; margin-top: 30px; border: 1px solid var(--apvs-gold);">
-            <h3 style="color: var(--apvs-gold);">PAULO</h3>
-            <p>Consultor Comercial Especialista - APVS Brasil</p>
-            <p><strong>Telefone: (11) 97831-1920</strong></p>
+        <table class="comp-table">
+            <thead>
+                <tr>
+                    <th>Benefício</th>
+                    <th>APVS Brasil</th>
+                    <th>Seguradoras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Consulta SPC/Serasa</td>
+                    <td class="check-yes">NÃO</td>
+                    <td class="check-no">SIM</td>
+                </tr>
+                <tr>
+                    <td>Análise de Perfil/Idade</td>
+                    <td class="check-yes">NÃO</td>
+                    <td class="check-no">SIM</td>
+                </tr>
+                <tr>
+                    <td>Preço Justo (Rateio)</td>
+                    <td class="check-yes">SIM</td>
+                    <td class="check-no">NÃO</td>
+                </tr>
+                <tr>
+                    <td>Indenização 100% FIPE</td>
+                    <td class="check-yes">SIM</td>
+                    <td class="check-no">SIM</td>
+                </tr>
+                <tr>
+                    <td>Aprovação Imediata</td>
+                    <td class="check-yes">SIM</td>
+                    <td class="check-no">NÃO</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FECHAMENTO -->
+    <section class="cta-section">
+        <h2>Pronto para proteger seu patrimônio com a Líder?</h2>
+        <p>Não deixe para amanhã. O risco não espera.</p>
+        
+        <div class="consultant-card">
+            <h3 style="color: var(--apvs-gold); font-size: 2rem;">PAULO</h3>
+            <p style="letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 20px;">CONSULTOR ESPECIALISTA APVS BRASIL</p>
+            <p><i class="fas fa-phone-alt"></i> (11) 97831-1920</p>
+            <p><i class="fas fa-shield-alt"></i> Atendimento em todo o Território Nacional</p>
         </div>
-        <br>
-        <a href="https://wa.me/5511978311920?text=Olá%20Paulo,%20vi%20seu%20portfólio%20e%20preciso%20da%20melhor%20proteção%20veicular%20do%20Brasil!" class="btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> SOLICITAR COTAÇÃO AGORA
+
+        <a href="https://wa.me/5511978311920?text=Olá%20Paulo,%20quero%20fechar%20minha%20proteção%20com%20a%20APVS%20Brasil%20agora!" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> FECHAR MINHA COTAÇÃO AGORA
         </a>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <div class="footer-info">
-            <p><strong>APVS BRASIL - ASSOCIAÇÃO DE PROTEÇÃO VEICULAR E SERVIÇOS SOCIAIS</strong></p>
-            <p>CNPJ: 10.395.397/0001-13</p>
-            <p>Sede Administrativa: Belo Horizonte/MG | Atendimento em 23 Estados</p>
-            <p style="margin-top: 15px; font-style: italic;">"Grandes patrimônios exigem grandes parceiros."</p>
-        </div>
-        <div class="copyright">
-            &copy; 2026 APVS BRASIL - Todos os direitos reservados. Desenvolvido para Consultor Paulo.
-        </div>
+        <p>APVS BRASIL - CNPJ: 10.395.397/0001-13</p>
+        <p>Sede: Belo Horizonte/MG | Presença em 23 Estados e DF</p>
+        <p style="margin-top: 20px;">&copy; 2026 Todos os direitos reservados. Consultor Paulo.</p>
     </footer>
 
 </body>
